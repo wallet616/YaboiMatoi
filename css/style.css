@@ -1,0 +1,363 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #e6e6e6;
+  position: relative; }
+
+.panel, #welcome, #portfolio, #about, #contact {
+  overflow-x: hidden; }
+
+nav.navbar {
+  transition: background-color 200ms ease-in; }
+
+footer.footer {
+  padding: 20px 0px;
+  background-color: #e8e8e8; }
+
+.bg-heading-box {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow-x: hidden; }
+  @media screen and (min-width: 768px) {
+    .bg-heading-box {
+      position: absolute; } }
+  .bg-heading-box .bg-heading {
+    text-transform: uppercase;
+    padding: 20px 0px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 55px; }
+    @media screen and (min-width: 576px) {
+      .bg-heading-box .bg-heading {
+        font-size: 90px; } }
+    @media screen and (min-width: 768px) {
+      .bg-heading-box .bg-heading {
+        text-align: right;
+        font-size: 120px;
+        padding-right: 20px;
+        color: #e6e6e6; } }
+    @media screen and (min-width: 992px) {
+      .bg-heading-box .bg-heading {
+        text-align: right;
+        font-size: 150px;
+        padding-right: 20px;
+        color: #e6e6e6; } }
+    @media screen and (min-width: 1200px) {
+      .bg-heading-box .bg-heading {
+        text-align: right;
+        font-size: 170px;
+        padding-right: 20px;
+        color: #e6e6e6; } }
+
+#welcome {
+  min-height: 100vh;
+  background-color: #e6e6e6;
+  background-image: url("../img/hd-vert.jpg");
+  background-repeat: no-repeat;
+  background-size: cover cover;
+  background-position: center center; }
+  @media screen and (min-width: 992px) {
+    #welcome {
+      background-image: url("../img/hd-full.jpg"); } }
+  #welcome #logo {
+    color: #353535;
+    transform: rotate(-40deg);
+    text-shadow: -5px -10px 2px rgba(0, 0, 0, 0.1);
+    padding-top: 170px;
+    margin-left: -80px;
+    padding-bottom: 10px;
+    font-size: 100px;
+    letter-spacing: -15px; }
+    @media screen and (min-width: 576px) {
+      #welcome #logo {
+        margin-left: 30px;
+        padding-top: 140px;
+        padding-bottom: 10px;
+        font-size: 110px;
+        letter-spacing: -19px;
+        text-shadow: -5px -15px 2px rgba(0, 0, 0, 0.1); } }
+    @media screen and (min-width: 768px) {
+      #welcome #logo {
+        margin-left: 0px;
+        padding-top: 100px;
+        padding-bottom: 10px;
+        font-size: 120px;
+        letter-spacing: -19px;
+        text-shadow: -5px -15px 2px rgba(0, 0, 0, 0.1); } }
+    @media screen and (min-width: 992px) {
+      #welcome #logo {
+        margin-left: 0px;
+        padding-top: 100px;
+        padding-bottom: 10px;
+        font-size: 150px;
+        letter-spacing: -22px;
+        text-shadow: -5px -15px 3px rgba(0, 0, 0, 0.1); } }
+    @media screen and (min-width: 1200px) {
+      #welcome #logo {
+        margin-left: 0px;
+        padding-top: 90px;
+        padding-bottom: 10px;
+        font-size: 180px;
+        letter-spacing: -26px;
+        text-shadow: -5px -20px 3px rgba(0, 0, 0, 0.1); } }
+
+#portfolio {
+  background: linear-gradient(#fcfcfc, #f9f9f9); }
+
+.music-content {
+  padding-top: 30px;
+  padding-bottom: 80px; }
+  @media screen and (min-width: 576px) {
+    .music-content {
+      padding-top: 30px;
+      padding-bottom: 90px; } }
+  @media screen and (min-width: 768px) {
+    .music-content {
+      padding-top: 110px;
+      padding-bottom: 110px; } }
+  @media screen and (min-width: 992px) {
+    .music-content {
+      padding-top: 150px;
+      padding-bottom: 90px; } }
+  @media screen and (min-width: 1200px) {
+    .music-content {
+      padding-top: 170px;
+      padding-bottom: 90px; } }
+
+a.music-box {
+  text-decoration: none;
+  padding: 20px;
+  height: 100%;
+  color: #212529;
+  display: block; }
+  a.music-box .image-border::before, a.music-box .image-border::after {
+    transition: all 500ms ease; }
+  a.music-box .music-holder {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px; }
+    a.music-box .music-holder::before, a.music-box .music-holder::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: 0;
+      background: #000;
+      transition: all 0.3s ease; }
+    a.music-box .music-holder::before {
+      width: 2px;
+      height: 10%; }
+    a.music-box .music-holder::after {
+      width: 40%;
+      height: 2px; }
+  a.music-box .music-title {
+    font-size: 30px;
+    padding: 10px 20px 0px; }
+  a.music-box .music-date {
+    font-size: 15px;
+    padding: 0px 20px 20px;
+    text-align: right;
+    color: #7c7c7c; }
+  a.music-box .image {
+    filter: grayscale(90%); }
+  a.music-box:hover .image-border::after {
+    height: 100%; }
+  a.music-box:hover .image-border::before {
+    width: 100%; }
+  a.music-box:hover .music-holder::before {
+    height: 40%; }
+  a.music-box:hover .music-holder::after {
+    width: 100%; }
+  a.music-box:hover .image {
+    filter: grayscale(0%); }
+
+.LoadingAnimation {
+  margin: 100px auto 20px; }
+
+#loadingAnimation,
+#loadingAnimationDescription {
+  display: block; }
+
+#about {
+  background: linear-gradient(#e6e6e6, #e0e0e0); }
+  @media screen and (min-width: 768px) {
+    #about .bg-heading {
+      color: #fcfcfc; } }
+
+.about-description {
+  z-index: 100;
+  position: relative;
+  font-size: 20px;
+  padding: 40px 15px 90px;
+  line-height: 1.8em;
+  text-align: justify; }
+  @media screen and (min-width: 576px) {
+    .about-description {
+      font-size: 20px;
+      padding: 60px 0px 110px; } }
+  @media screen and (min-width: 768px) {
+    .about-description {
+      font-size: 20px;
+      padding: 110px 0px; } }
+  @media screen and (min-width: 992px) {
+    .about-description {
+      font-size: 20px;
+      padding: 160px 0px; } }
+  @media screen and (min-width: 1200px) {
+    .about-description {
+      font-size: 22px;
+      padding: 170px 0px; } }
+  .about-description p {
+    padding-left: 15px;
+    padding-right: 15px; }
+  .about-description i {
+    color: #626568; }
+
+.image {
+  width: 100%;
+  transition: all 0.3s ease; }
+
+.margin-small {
+  margin: 30px 0px;
+  position: relative; }
+
+.image-border {
+  border-bottom: 2px solid #000;
+  border-left: 2px solid #000;
+  display: block;
+  padding: 15px; }
+  .image-border::after {
+    content: "";
+    background: #000;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 50%;
+    width: 2px; }
+  .image-border::before {
+    content: "";
+    background: #000;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 2px;
+    width: 40%; }
+
+#contact {
+  background: linear-gradient(#fcfcfc, #f9f9f9); }
+
+a.contact-box {
+  padding: 40px 20px;
+  width: 100%;
+  height: 100%;
+  color: #212529;
+  display: block; }
+
+.contact-btn {
+  width: 100%;
+  height: 275px;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  line-height: 42px;
+  padding: 0;
+  border: none; }
+  .contact-btn > span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%; }
+    .contact-btn > span::before, .contact-btn > span::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: 0;
+      background: #000;
+      transition: all 0.3s ease; }
+    .contact-btn > span::before {
+      width: 2px;
+      height: 50%; }
+    .contact-btn > span::after {
+      width: 20%;
+      height: 2px; }
+    .contact-btn > span:hover::before {
+      height: 100%; }
+    .contact-btn > span:hover::after {
+      width: 100%; }
+  .contact-btn::before, .contact-btn::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    background: #000;
+    transition: all 0.3s ease; }
+  .contact-btn::before {
+    height: 50%;
+    width: 2px; }
+  .contact-btn::after {
+    width: 20%;
+    height: 2px; }
+  .contact-btn:hover::before {
+    height: 100%; }
+  .contact-btn:hover::after {
+    width: 100%; }
+  .contact-btn:hover .fab,
+  .contact-btn:hover .far {
+    padding: 60px 5px 0px;
+    font-size: 100px; }
+  .contact-btn:hover .contact-desc {
+    opacity: 1; }
+
+.contact-content {
+  padding-top: 10px;
+  padding-bottom: 80px; }
+  @media screen and (min-width: 576px) {
+    .contact-content {
+      padding-top: 10px;
+      padding-bottom: 90px; } }
+  @media screen and (min-width: 768px) {
+    .contact-content {
+      padding-top: 80px;
+      padding-bottom: 110px; } }
+  @media screen and (min-width: 992px) {
+    .contact-content {
+      padding-top: 130px;
+      padding-bottom: 90px; } }
+  @media screen and (min-width: 1200px) {
+    .contact-content {
+      padding-top: 150px;
+      padding-bottom: 90px; } }
+  .contact-content .fab,
+  .contact-content .far {
+    padding: 60px 5px 0px;
+    font-size: 140px;
+    transition: all 200ms ease-in; }
+  .contact-content .contact-desc {
+    transition: all 200ms ease-in;
+    opacity: 0;
+    font-size: 20px;
+    padding: 20px 5px 50px;
+    font-weight: 100; }
+
+.slideanim {
+  visibility: hidden; }
+  .slideanim.slideanim-fast {
+    animation-duration: 1000ms; }
+
+.slide {
+  animation-name: slide;
+  animation-duration: 1900ms;
+  visibility: visible; }
+
+@keyframes slide {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/*# sourceMappingURL=style.css.map */

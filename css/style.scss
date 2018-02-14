@@ -1,0 +1,465 @@
+///////////////////////////////
+// Sizing
+$size-sm: "576px";
+$size-md: "768px";
+$size-lg: "992px";
+$size-xl: "1200px";
+///////////////////////////////
+// Styles
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e6e6e6;
+    position: relative;
+}
+
+.panel {
+    overflow-x: hidden;
+}
+
+///////////////////////////////
+// Menu
+nav.navbar {
+    transition: background-color 200ms ease-in;
+}
+
+///////////////////////////////
+// Footer
+footer.footer {
+    padding: 20px 0px;
+    background-color: #e8e8e8;
+}
+
+///////////////////////////////
+// Bg heading
+.bg-heading-box {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    @media screen and (min-width: $size-md) {
+        position: absolute;
+    }
+    .bg-heading {
+        text-transform: uppercase;
+        padding: 20px 0px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 55px;
+        @media screen and (min-width: $size-sm) {
+            font-size: 90px;
+        }
+        @media screen and (min-width: $size-md) {
+            text-align: right;
+            font-size: 120px;
+            padding-right: 20px;
+            color: #e6e6e6;
+        }
+        @media screen and (min-width: $size-lg) {
+            text-align: right;
+            font-size: 150px;
+            padding-right: 20px;
+            color: #e6e6e6;
+        }
+        @media screen and (min-width: $size-xl) {
+            text-align: right;
+            font-size: 170px;
+            padding-right: 20px;
+            color: #e6e6e6;
+        }
+    }
+}
+
+///////////////////////////////
+// First panel (welcome)
+#welcome {
+    @extend .panel;
+    min-height: 100vh;
+    background-color: #e6e6e6;
+    background-image: url("../img/hd-vert.jpg");
+    background-repeat: no-repeat;
+    background-size: cover cover;
+    background-position: center center;
+    @media screen and (min-width: $size-lg) {
+        background-image: url("../img/hd-full.jpg"); //min-height: 56.25vw; // 16:9 ratio
+    }
+    #logo {
+        color: #353535;
+        transform: rotate(-40deg);
+        text-shadow: -5px -10px 2px rgba(0, 0, 0, 0.1);
+        padding-top: 170px;
+        margin-left: -80px;
+        padding-bottom: 10px;
+        font-size: 100px;
+        letter-spacing: -15px;
+        @media screen and (min-width: $size-sm) {
+            margin-left: 30px;
+            padding-top: 140px;
+            padding-bottom: 10px;
+            font-size: 110px;
+            letter-spacing: -19px;
+            text-shadow: -5px -15px 2px rgba(0, 0, 0, 0.1);
+        }
+        @media screen and (min-width: $size-md) {
+            margin-left: 0px;
+            padding-top: 100px;
+            padding-bottom: 10px;
+            font-size: 120px;
+            letter-spacing: -19px;
+            text-shadow: -5px -15px 2px rgba(0, 0, 0, 0.1);
+        }
+        @media screen and (min-width: $size-lg) {
+            margin-left: 0px;
+            padding-top: 100px;
+            padding-bottom: 10px;
+            font-size: 150px;
+            letter-spacing: -22px;
+            text-shadow: -5px -15px 3px rgba(0, 0, 0, 0.1);
+        }
+        @media screen and (min-width: $size-xl) {
+            margin-left: 0px;
+            padding-top: 90px;
+            padding-bottom: 10px;
+            font-size: 180px;
+            letter-spacing: -26px;
+            text-shadow: -5px -20px 3px rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+///////////////////////////////
+// Second panel (portfolio)
+#portfolio {
+    @extend .panel;
+    background: linear-gradient(#fcfcfc, #f9f9f9);
+}
+
+.music-content {
+    padding-top: 30px;
+    padding-bottom: 80px;
+    @media screen and (min-width: $size-sm) {
+        padding-top: 30px;
+        padding-bottom: 90px;
+    }
+    @media screen and (min-width: $size-md) {
+        padding-top: 110px;
+        padding-bottom: 110px;
+    }
+    @media screen and (min-width: $size-lg) {
+        padding-top: 150px;
+        padding-bottom: 90px;
+    }
+    @media screen and (min-width: $size-xl) {
+        padding-top: 170px;
+        padding-bottom: 90px;
+    }
+}
+
+a.music-box {
+    text-decoration: none;
+    padding: 20px;
+    height: 100%;
+    color: #212529;
+    display: block;
+    .image-border {
+        &::before,
+        &::after {
+            transition: all 500ms ease;
+        }
+    }
+    .music-holder {
+        width: 100%;
+        position: relative;
+        margin-bottom: 20px;
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            background: #000;
+            transition: all 0.3s ease;
+        }
+        &::before {
+            width: 2px;
+            height: 10%;
+        }
+        &::after {
+            width: 40%;
+            height: 2px;
+        }
+    }
+    .music-title {
+        font-size: 30px;
+        padding: 10px 20px 0px;
+    }
+    .music-date {
+        font-size: 15px;
+        padding: 0px 20px 20px;
+        text-align: right;
+        color: #7c7c7c;
+    }
+    .image {
+        filter: grayscale(90%);
+    }
+    &:hover {
+        .image-border {
+            &::after {
+                height: 100%;
+            }
+            &::before {
+                width: 100%;
+            }
+        }
+        .music-holder {
+            &::before {
+                height: 40%;
+            }
+            &::after {
+                width: 100%;
+            }
+        }
+        .image {
+            filter: grayscale(0%);
+        }
+    }
+}
+
+.LoadingAnimation {
+    margin: 100px auto 20px;
+}
+
+#loadingAnimation,
+#loadingAnimationDescription {
+    display: block;
+}
+
+///////////////////////////////
+// Second third (about)
+#about {
+    @extend .panel;
+    background: linear-gradient(#e6e6e6, #e0e0e0);
+    .bg-heading {
+        @media screen and (min-width: $size-md) {
+            color: #fcfcfc;
+        }
+    }
+}
+
+.about-description {
+    z-index: 100;
+    position: relative;
+    font-size: 20px;
+    padding: 40px 15px 90px;
+    line-height: 1.8em;
+    text-align: justify;
+    @media screen and (min-width: $size-sm) {
+        font-size: 20px;
+        padding: 60px 0px 110px;
+    }
+    @media screen and (min-width: $size-md) {
+        font-size: 20px;
+        padding: 110px 0px;
+    }
+    @media screen and (min-width: $size-lg) {
+        font-size: 20px;
+        padding: 160px 0px;
+    }
+    @media screen and (min-width: $size-xl) {
+        font-size: 22px;
+        padding: 170px 0px;
+    }
+    p {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    i {
+        color: #626568;
+    }
+}
+
+.image {
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.margin-small {
+    margin: 30px 0px;
+    position: relative;
+}
+
+.image-border {
+    border-bottom: 2px solid #000;
+    border-left: 2px solid #000;
+    display: block;
+    padding: 15px;
+    &::after {
+        content: "";
+        background: #000;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 50%;
+        width: 2px;
+    }
+    &::before {
+        content: "";
+        background: #000;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 2px;
+        width: 40%;
+    }
+}
+
+///////////////////////////////
+// Second fourth (contact)
+#contact {
+    @extend .panel;
+    background: linear-gradient(#fcfcfc, #f9f9f9);
+}
+
+a.contact-box {
+    padding: 40px 20px;
+    width: 100%;
+    height: 100%;
+    color: #212529;
+    display: block;
+}
+
+.contact-btn {
+    width: 100%;
+    height: 275px;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    &>span {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            background: #000;
+            transition: all 0.3s ease;
+        }
+        &::before {
+            width: 2px;
+            height: 50%;
+        }
+        &::after {
+            width: 20%;
+            height: 2px;
+        }
+        &:hover::before {
+            height: 100%;
+        }
+        &:hover::after {
+            width: 100%;
+        }
+    }
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+        right: 0;
+        top: 0;
+        background: #000;
+        transition: all 0.3s ease;
+    }
+    &::before {
+        height: 50%;
+        width: 2px;
+    }
+    &::after {
+        width: 20%;
+        height: 2px;
+    }
+    &:hover::before {
+        height: 100%;
+    }
+    &:hover::after {
+        width: 100%;
+    }
+    &:hover {
+        .fab,
+        .far {
+            padding: 60px 5px 0px;
+            font-size: 100px;
+        }
+        .contact-desc {
+            opacity: 1;
+        }
+    }
+}
+
+.contact-content {
+    padding-top: 10px;
+    padding-bottom: 80px;
+    @media screen and (min-width: $size-sm) {
+        padding-top: 10px;
+        padding-bottom: 90px;
+    }
+    @media screen and (min-width: $size-md) {
+        padding-top: 80px;
+        padding-bottom: 110px;
+    }
+    @media screen and (min-width: $size-lg) {
+        padding-top: 130px;
+        padding-bottom: 90px;
+    }
+    @media screen and (min-width: $size-xl) {
+        padding-top: 150px;
+        padding-bottom: 90px;
+    }
+    .fab,
+    .far {
+        padding: 60px 5px 0px;
+        font-size: 140px;
+        transition: all 200ms ease-in;
+    }
+    .contact-desc {
+        transition: all 200ms ease-in;
+        opacity: 0;
+        font-size: 20px;
+        padding: 20px 5px 50px;
+        font-weight: 100;
+    }
+}
+
+///////////////////////////////
+// Animation effects
+.slideanim {
+    visibility: hidden;
+    &.slideanim-fast {
+        animation-duration: 1000ms;
+    }
+}
+
+.slide {
+    animation-name: slide;
+    animation-duration: 1900ms;
+    visibility: visible;
+}
+
+@keyframes slide {
+    from {
+        opacity: 0; //transform: translateY(60%);
+    }
+    to {
+        opacity: 1; //transform: translateY(0%);
+    }
+}
